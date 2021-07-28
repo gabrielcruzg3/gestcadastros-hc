@@ -6,19 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestão de Produtos</title>    
     <script src="js/produto.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <form id="form-produtos" method="GET" class="form">
+<body class="form">
+    <form id="form-produtos" method="GET">
         <div class="">
             <h3>Adiciona Produto</h3>
             <ul>
                 <p class="">Nome do produto</p>                  
-                <input type="name" id="nomeProduto" class="maxWidth">
+                <input type="name" id="nomeProduto" class="maxWidth text-success">
             </ul>            
             <br>
             <ul>
-                <input type="submit" value="Adicionar" onclick="cadastraProdutos()" class="btn">
+                <input type="submit" value="Adicionar" onclick="cadastraProdutos()" class="btn btn-primary">
             </ul>
         </div>               
     </form>
@@ -33,7 +34,7 @@
             <label type="name" id="produtoList" class="maxWidth"></label>
         </ul>    
         <ul>
-            <input type="button" value="Remover" onclick="removeProdutos()" class="btn">
+            <input type="button" value="Remover" onclick="removeProdutos()" class="btn-danger btn">
         </ul>       
 
     </div>
