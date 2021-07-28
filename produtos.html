@@ -11,17 +11,30 @@
 <body>
     <form id="form-produtos" method="GET" class="form">
         <div class="">
+            <h3>Adiciona Produto</h3>
             <ul>
                 <p class="">Nome do produto</p>                  
                 <input type="name" id="nomeProduto" class="maxWidth">
             </ul>            
             <br>
             <ul>
-                <input type="submit" value="+" onclick="cadastraProduto()" class="btn">                    
-            
+                <input type="submit" value="Adicionar" onclick="cadastraProduto()" class="btn">
             </ul>
-        </div>
-               
+        </div>               
     </form>
+
+    <br>
+
+    <div>
+        <h3>Lista/Remove produtos</h3>
+        <ul>
+            <p class="">Nome do produto</p>                  
+            <label type="name" id="nomeProduto" class="maxWidth"></label>
+        </ul>    
+        <ul>
+            <input type="submit" value="Remover" onclick="removeProduto()" class="btn">
+        </ul>       
+
+    </div>
 </body>
 </html>

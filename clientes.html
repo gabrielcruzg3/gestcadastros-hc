@@ -5,34 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestão de Clientes</title>
-    <link rel="stylesheet" href="css/style.css">    
+    <link rel="stylesheet" href="css/syle.css">    
     <script src="js/js.js"></script>
 </head>
 <body>
     <form id="form-clientes" method="GET" class="form">
         <div class="">
+            <h3>Adiciona cliente</h3>
             <ul>
                 <p class="">Nome</p>                  
                 <input type="name" id="nome" class="maxWidth">
-            </ul>            
-            <br>
+            </ul> 
             <ul>
                 <p>Email:</p>
                     <input class="maxWidth" type="email" id="email">               
-            </ul>            
-            <br>
+            </ul> 
             <ul>
                 <p>Endereço:</p>
                     <input class="maxWidth" type="adress" id="adress">               
             </ul>
-            <br>
             <ul>
-                <input type="submit" value="Enviar" onclick="cadastraUser()" class="maxWidth">                    
-            
+                <input type="submit" value="Enviar" onclick="cadastraUser()" class="maxWidth">                 
             </ul>
-        </div>
-               
+        </div>               
     </form>
-    
+
+    <div>
+        <h3>Lista/Remove cliente</h3>
+        <ul>
+            <p class="">Nome do cliente:</p>                  
+            <label type="name" id="nome" class="maxWidth"></label>
+        </ul> 
+        <ul>
+            <p>Email do cliente:</p>
+                <label class="maxWidth" type="email" id="email"></label>
+        </ul>  
+        <ul>
+            <p>Endereço do cliente:</p>
+                <label class="maxWidth" type="adress" id="adress"></label>              
+        </ul>
+        <ul>
+            <input type="submit" value="Remover" onclick="RemoveUser()" class="maxWidth">                 
+        </ul>
+
+
+    </div>
+
 </body>
 </html>
