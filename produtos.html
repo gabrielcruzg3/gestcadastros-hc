@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestão de Produtos</title>    
-    <script src="js/js.js"></script>
+    <script src="js/produto.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -18,21 +18,22 @@
             </ul>            
             <br>
             <ul>
-                <input type="submit" value="Adicionar" onclick="cadastraProduto()" class="btn">
+                <input type="submit" value="Adicionar" onclick="cadastraProdutos()" class="btn">
             </ul>
         </div>               
     </form>
 
     <br>
 
-    <div>
+    <div id="listaProdutos">
         <h3>Lista/Remove produtos</h3>
+        <input type="button" value="Carregar produtos" onclick="listaProdutos()" class="maxWidth">
         <ul>
             <p class="">Nome do produto</p>                  
-            <label type="name" id="nomeProduto" class="maxWidth"></label>
+            <label type="name" id="produtoList" class="maxWidth"></label>
         </ul>    
         <ul>
-            <input type="submit" value="Remover" onclick="removeProduto()" class="btn">
+            <input type="button" value="Remover" onclick="removeProdutos()" class="btn">
         </ul>       
 
     </div>

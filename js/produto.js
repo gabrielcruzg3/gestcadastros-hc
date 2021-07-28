@@ -15,32 +15,30 @@ document.getElementById("form-produtos").addEventListener("submit", function () 
 }
 
 function listaProdutos(){
-    var nomeProduto = document.getElementById('nomeProduto').value;
-      
-   localStorage.setItem('nomeProduto', JSON.stringify(nomeProduto))
+    document.getElementById('produtoList').innerHTML = localStorage.getItem('nomeProduto', JSON.stringify(nomeProduto))
 }
 
 
 window.onload=function(){
 
-document.getElementById("form-produtos").addEventListener("submit", function () {
-   document.getElementById('form-produtos').submit(listaProdutos());
+document.getElementById("produtoList").addEventListener("button", function (e) {
+   document.getElementById('produtoList').button(listaProdutos());
    listaProdutos();
+   e.preventDefault();
    
  });
 }
 
 function removeProdutos(){
-    var nomeProduto = document.getElementById('nomeProduto').value;
-      
-   localStorage.setItem('nomeProduto', JSON.stringify(nomeProduto))
+
+   localStorage.removeItem('nomeProduto')
 }
 
 
 window.onload=function(){
 
-document.getElementById("form-produtos").addEventListener("submit", function () {
-   document.getElementById('form-produtos').submit(removeProdutos());
+document.getElementById("listaProdutos").addEventListener("remove", function () {
+   document.getElementById('listaProdutos').remove(removeProdutos());
    removeProdutos();
    
  });
