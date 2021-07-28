@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestão de Clientes</title>
     <link rel="stylesheet" href="css/syle.css">    
-    <script src="js/js.js"></script>
+    <script src="js/cliente.js"></script>
 </head>
 <body>
-    <form id="form-clientes" method="GET" class="form">
+    <div id="form-clientes" method="GET" class="form">
         <div class="">
             <h3>Adiciona cliente</h3>
             <ul>
@@ -30,22 +30,23 @@
         </div>               
     </form>
 
-    <div>
+    <div id="listaClientes">
         <h3>Lista/Remove cliente</h3>
+        <input type="button" value="Carregar clientes" onclick="listaUser()" class="maxWidth">
         <ul>
             <p class="">Nome do cliente:</p>                  
-            <label type="name" id="nome" class="maxWidth"></label>
+            <label type="name" id="nomeList" class="maxWidth"></label>
         </ul> 
         <ul>
             <p>Email do cliente:</p>
-                <label class="maxWidth" type="email" id="email"></label>
+                <label class="maxWidth" type="email" id="emailList"></label>
         </ul>  
         <ul>
             <p>Endereço do cliente:</p>
-                <label class="maxWidth" type="adress" id="adress"></label>              
+                <label class="maxWidth" type="adress" id="adressList"></label>              
         </ul>
         <ul>
-            <input type="submit" value="Remover" onclick="RemoveUser()" class="maxWidth">                 
+            <input type="submit" value="Remover" onclick="removeUser()" class="maxWidth">                 
         </ul>
 
 

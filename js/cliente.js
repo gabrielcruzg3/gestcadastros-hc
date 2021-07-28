@@ -15,48 +15,38 @@ window.onload=function(){
 document.getElementById("form-clientes").addEventListener("submit", function () {
    document.getElementById('form-clientes').submit(cadastraUser());
    cadastraUser();
-   
  });
 }
 
-function listaUser(){
-    var nome = document.getElementById('nome').value;
-    var email = document.getElementById('email').value;
-    var adress = document.getElementById('adress').value;
+function listaUser(){  
     
 
-    getElementById('').innerHTML= localStorage.getItem('nome', JSON.stringify(nome))   
-    = localStorage.getItem('email', JSON.stringify(email))
-    = localStorage.getItem('adress', JSON.stringify(adress))
+    document.getElementById('nomeList').innerHTML = localStorage.getItem('nome', JSON.stringify(nome))   
+    document.getElementById('emailList').innerHTML = localStorage.getItem('email', JSON.stringify(email))
+    document.getElementById('adressList').innerHTML = localStorage.getItem('adress', JSON.stringify(adress))
 }
 
 
 window.onload=function(){
 
-document.getElementById("form-clientes").addEventListener("submit", function () {
-   document.getElementById('form-clientes').submit(listaUser());
+document.getElementById("listaClientes").addEventListener("button", function (e) {
+   document.getElementById('listaClientes').button(listaUser());
    listaUser();
+   e.preventDefault();
    
  });
 }
 
 function removeUser(){
-    var nome = document.getElementById('nome').value;
-    var email = document.getElementById('email').value;
-    var adress = document.getElementById('adress').value;
-    
-
-    localStorage.setItem('nome', JSON.stringify(nome))   
-    localStorage.setItem('email', JSON.stringify(email))
-    localStorage.setItem('adress', JSON.stringify(adress))
+    localStorage.removeItem('nome')   
+    localStorage.removeItem('email')
+    localStorage.removeItem('adress')
 }
-
 
 window.onload=function(){
 
-document.getElementById("form-clientes").addEventListener("submit", function () {
-   document.getElementById('form-clientes').submit(removeUser());
-   removeUser();
-   
+document.getElementById("listaClientes").addEventListener("submit", function () {
+   document.getElementById('listaClientes').submit(removeUser());
+   removeUser();   
  });
 }
