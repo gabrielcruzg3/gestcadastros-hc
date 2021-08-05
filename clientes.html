@@ -9,51 +9,52 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">   
     <script src="js/cliente.js"></script>
 </head>
-<body class="form">
-    <form id="form-clientes" method="GET" >
+<body>
+
+    <div class="form">
         <div class="">
-            <h3>Adiciona cliente</h3>
-            
-                <ul>
-                    <p class="">Nome</p>                  
-                    <input type="name" id="nome" class="maxWidth">
-                </ul> 
-                <ul>
-                    <p>Email:</p>
-                        <input class="maxWidth" type="email" id="email">               
-                </ul> 
-                <ul>
-                    <p>Endereço:</p>
-                        <input class="maxWidth" type="adress" id="adress">               
-                </ul>
-                <ul>
-                    <input type="submit" value="Adcionar" onclick="cadastraUser()" class="maxWidth btn btn-primary">                 
-                </ul>
-            
-        </div>               
-    </form>
+            <form id="form-clientes" method="GET" >            
+                <h3>Adiciona cliente</h3>                
+                    <ul>
+                        <p class="">Nome</p>                  
+                        <input type="name" id="nome" class="maxWidth">
+                    </ul> 
+                    <ul>
+                        <p>Email:</p>
+                            <input class="maxWidth" type="email" id="email">               
+                    </ul> 
+                    <ul>
+                        <p>Endereço:</p>
+                            <input class="maxWidth" type="adress" id="adress">               
+                    </ul>
+                    <ul>
+                        <input type="submit" value="Adcionar" onclick="cadastraUser()" class="maxWidth btn btn-primary">                 
+                    </ul>                        
+            </form>
+        </div> 
 
-    <div id="listaClientes">
-        <h3>Lista/Remove cliente</h3>
-        <input type="button" value="Carregar clientes" onclick="listaUser()" class="maxWidth btn btn-secondary">
-        <ul>
-            <p class="">Nome do cliente:</p>                  
-            <label type="name" id="nomeList" class="maxWidth text-success"></label>
-        </ul> 
-        <ul>
-            <p>Email do cliente:</p>
+        <div id="listaClientes">
+            <h3>Lista/Remove cliente</h3>
+                <input type="button" value="Carregar clientes" onclick="listaUser()" class="maxWidth btn btn-secondary">
+            <ul>
+                <p class="">Nome do cliente:</p>                  
+                <label type="name" id="nomeList" class="maxWidth text-success"></label>
+            </ul> 
+            <ul>
+                <p>Email do cliente:</p>
                 <label class="maxWidth" type="email" id="emailList" class="maxWidth text-success"></label>
-        </ul>  
-        <ul>
-            <p>Endereço do cliente:</p>
+            </ul>  
+            <ul>
+                <p>Endereço do cliente:</p>
                 <label class="maxWidth" type="adress" id="adressList" class="maxWidth text-success"></label>              
-        </ul>
-        <ul>
-            <input type="submit" value="Remover" onclick="removeUser()" class="maxWidth btn btn-danger">                 
-        </ul>
-
-
+            </ul>
+        </div>
+            
+        <div>
+            <ul>
+                <input type="submit" value="Remover" onclick="removeUser()" class="maxWidth btn btn-danger">                 
+            </ul>
+        </div>
     </div>
-
 </body>
 </html>

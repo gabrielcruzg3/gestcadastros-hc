@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,34 +9,42 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="form">
-    <form id="form-produtos" method="GET">
+<body>
+
+    <div class="form">
         <div class="">
-            <h3>Adiciona Produto</h3>
-            <ul>
-                <p class="">Nome do produto</p>                  
-                <input type="name" id="nomeProduto" class="maxWidth text-success">
-            </ul>            
-            <br>
-            <ul>
-                <input type="submit" value="Adicionar" onclick="cadastraProdutos()" class="btn btn-primary">
-            </ul>
-        </div>               
-    </form>
+            <form id="form-produtos" method="GET">
+            
+                <h3>Adiciona Produto</h3>
+                <ul>
+                    <p class="">Nome do produto</p>                  
+                    <input type="name" id="nomeProduto" class="maxWidth text-success">
+                </ul>            
+                <br>
+                <ul>
+                    <input type="submit" value="Adicionar" onclick="cadastraProdutos()" class="btn btn-primary">
+                </ul>
+                        
+            </form>
+        </div>
 
-    <br>
+        <br>
 
-    <div id="listaProdutos">
-        <h3>Lista/Remove produtos</h3>
-        <input type="button" value="Carregar produtos" onclick="listaProdutos()" class="maxWidth">
-        <ul>
-            <p class="">Nome do produto</p>                  
-            <label type="name" id="produtoList" class="maxWidth"></label>
-        </ul>    
-        <ul>
-            <input type="button" value="Remover" onclick="removeProdutos()" class="btn-danger btn">
-        </ul>       
-
+        <div id="listaProdutos" class="">
+            <div>
+                <h3>Lista/Remove produtos</h3>
+                <input type="button" value="Carregar produtos" onclick="listaProdutos()" class="maxWidth btn-secondary">
+                <ul>
+                    <p class="">Nome do produto</p>                  
+                    <label type="name" id="produtoList" class="maxWidth"></label>
+                </ul>
+            </div>        
+            <div>
+                <ul>
+                    <input type="button" value="Remover" onclick="removeProdutos()" class="btn-danger btn">
+                </ul>      
+            </div>        
+        </div>
     </div>
 </body>
 </html>
