@@ -1,7 +1,7 @@
 function cadastraProdutos(){
-    var nomeProduto = document.getElementById('nomeProduto').value      
-   
+    var nomeProduto = document.getElementById('nomeProduto').value
     localStorage.setItem('nomeProduto', JSON.stringify(nomeProduto))
+   
 }
 
 function listaProdutos(){
